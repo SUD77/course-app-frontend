@@ -1,8 +1,10 @@
 import "./App.css";
-import { ToastContainer, toast } from 'react-toastify';
+import Home from "./components/Home";
 
 function App() {
-  return <h1>The Simple Application</h1>;
+  return (
+    <Home/>
+  );
 }
 
 export default App;
