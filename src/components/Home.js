@@ -4,8 +4,8 @@ import { Button, Container } from "reactstrap";
 function Home() {
   return (
     <div className="jumbotron text-center">
-      <h1>LearnCode with Sudhasnhu</h1>
-      <p>lorem dsfsdfsdf</p>
+      <h1>LearnCode with Sudhanshu</h1>
+      <p>This is developed by Sudhanshu Jaiswal for learning purpose. </p>
       <Container>
         <Button color="primary">Start Using</Button>
       </Container>
