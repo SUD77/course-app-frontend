@@ -7,7 +7,7 @@ function Home() {
       <h1>LearnCode with Sudhanshu</h1>
       <p>This is developed by Sudhanshu Jaiswal for learning purpose. </p>
       <Container>
-        <Button color="primary">Start Using</Button>
+        <Button outline color="primary">Start Using</Button>
       </Container>
     </div>
   );
