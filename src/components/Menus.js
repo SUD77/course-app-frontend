@@ -22,19 +22,44 @@ function Menus() {
           Contact
         </ListGroupItem> */}
 
-        <Link tag="a" to="/" action>
+        <Link
+          className="list-group-item list-group-item-action"
+          tag="a"
+          to="/"
+          action
+        >
           Home
         </Link>
-        <Link tag="a" to="/add-course" action>
+        <Link
+          className="list-group-item list-group-item-action"
+          tag="a"
+          to="/add-course"
+          action
+        >
           Add Course
         </Link>
-        <Link tag="a" to="/view-courses" action>
+        <Link
+          className="list-group-item list-group-item-action"
+          tag="a"
+          to="/view-courses"
+          action
+        >
           View Courses
         </Link>
-        <Link tag="a" to="#1" action>
+        <Link
+          className="list-group-item list-group-item-action"
+          tag="a"
+          to="#1"
+          action
+        >
           About
         </Link>
-        <Link tag="a" to="#1" action>
+        <Link
+          className="list-group-item list-group-item-action"
+          tag="a"
+          to="#1"
+          action
+        >
           Contact
         </Link>
       </ListGroup>
