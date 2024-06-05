@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Button, Container } from "reactstrap";
 
 function Home() {
+
+  useEffect(()=>{
+    document.title="Home || Course Application";
+  },[])
   return (
     <div className="jumbotron text-center">
       <h1>LearnCode with Sudhanshu</h1>
