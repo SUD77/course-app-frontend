@@ -2,6 +2,7 @@ import React, { Fragment, useEffect, useState } from "react";
 import { Button, Container, Form, FormGroup, Input } from "reactstrap";
 import axios from "axios";
 import base_url from "../api/bootapi";
+import { toast } from "react-toastify";
 
 function AddCourse() {
   useEffect(() => {
@@ -17,19 +18,24 @@ function AddCourse() {
     e.preventDefault();
   };
 
-
   //Creating a function to post data on server
-  const addCourseToServer=(data)=>{
-    axios.post(`${base_url}/courses`,data).then(
-      (response)=>{
+  const addCourseToServer = (data) => {
+    axios.post(`${base_url}/courses`, data).then(
+      (response) => {
         console.log(response);
         console.log("Success");
+        toast.success("Course added", {
+          position: "bottom-left",
+        });
       },
-      (error)=>{
+      (error) => {
         console.log(error);
         console.log("error");
+        toast.error("Something went wrong", {
+          position: "bottom-left",
+        });
       }
-    )
+    );
   };
 
   return (
@@ -78,7 +84,11 @@ function AddCourse() {
           <Button type="submit" color="success">
             Add Course
           </Button>
-          <Button color="warning" style={{ marginLeft: 10 }}>
+          <Button
+            type="reset"
+            color="warning"
+            style={{ marginLeft: 10 }}
+          >
             Clear
           </Button>
         </Container>
