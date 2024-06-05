@@ -16,11 +16,16 @@ function AllCourses() {
     axios.get(`${base_url}/courses`).then(
       (response)=>{
         console.log(response.data);
-        toast.success("Courses loaded");
+        toast.success("Courses loaded",{
+          position:"bottom-left",
+        });
+        setCourses(response.data);
       },
       (error)=>{
         console.log(error);
-        toast.error("Something went wrong");
+        toast.error("Something went wrong",{
+          position:"bottom-left",
+        });
       }
     );
   };
@@ -33,11 +38,7 @@ function AllCourses() {
     getAllCoursesFromServer();
   },[]);
 
-  const [courses, setCourses] = useState([
-    { title: "java Cousrse", description: "Tis is a demo course" },
-    { title: "java Cousrse", description: "Tis is a demo course" },
-    { title: "java Cousrse", description: "Tis is a demo course" },
-  ]);
+  const [courses, setCourses] = useState([]);
 
   return (
     <div>
