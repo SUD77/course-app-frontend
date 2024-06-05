@@ -11,6 +11,12 @@ function AllCourses() {
   },[])
 
 
+
+  const updateCourses=(id)=>{
+    setCourses(courses.filter((c)=> c.id!=id));
+  };
+
+
   //Function to call server
   const getAllCoursesFromServer=()=>{
     axios.get(`${base_url}/courses`).then(
@@ -46,7 +52,7 @@ function AllCourses() {
       <p>List of Courses are as follows </p>
 
       {
-        courses.length > 0 ? courses.map((item) => <Course key={item.id} course={item} /> ) : "No Courses"
+        courses.length > 0 ? courses.map((item) => <Course key={item.id} course={item} update={updateCourses} /> ) : "No Courses"
       }
     </div>
   );

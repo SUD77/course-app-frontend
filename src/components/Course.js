@@ -16,13 +16,15 @@ import { toast } from "react-toastify";
 
 
 
-function Course({course}) {
+function Course({course,update}) {
 
   //making delete 
   const deleteCourse=(id)=>{
     axios.delete(`${base_url}/courses/${id}`).then(
       (response)=>{
         toast.success("Deleted");
+        update(id);
+
       },
       (error)=>{
         toast.error("Couldnt be deleted");
